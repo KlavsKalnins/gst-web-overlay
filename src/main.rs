@@ -22,7 +22,7 @@ fn main() {
         Ok(_) => (),
         Err(e) => println!("Error creating dir: {}", e.to_string()),
     }
-    
+
     thread::spawn(|| {
         let base_args: String = "v4l2src device=/dev/video0 \
             ! videoconvert ! videoscale ! video/x-raw,width=640,height=480 \
